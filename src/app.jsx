@@ -7,6 +7,7 @@ import Carrinho from './containers/Carrinho/carrinho';
 import Produtos from './containers/Produtos/produtos';
 
 function App() {
+  console.log('Componente App renderizado');
   return (
     <Router>
       <div>
