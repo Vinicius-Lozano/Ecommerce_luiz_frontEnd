@@ -1,0 +1,19 @@
+.box-area{
+    width: 930px;
+}
+
+.right-box{
+    padding: 30px 10px 30px 10px;
+}
+
+::placeholder{
+    font-size: 16px;
+}
+
+body {
+    background-image: url('../../assets/Backgroundlogin.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}

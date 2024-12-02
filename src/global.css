@@ -1,0 +1,47 @@
+.bg-custom-blue {
+    background-color: rgb(95, 157, 228);
+}
+
+@font-face {
+    font-family: 'shirikhand';
+    src: url('./assets/Shrikhand-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.text-shirik{
+    font-family: 'shirikhand', sans-serif;
+    font-size: 1.5rem;     
+}
+
+@font-face {
+    font-family: 'lora';
+    src: url('./assets/Lora-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.text-lora{
+    font-family: 'lora', sans-serif;
+    font-size: 1.5rem;     
+}
+
+@font-face {
+    font-family: 'loraMI';
+    src: url('./assets/Lora-MediumItalic.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.text-lorami{
+    font-family: 'loraMI', sans-serif;
+    font-size: 1.5rem;     
+}
+
+@font-face {
+    font-family: 'loraB';
+    src: url('./assets/Lora-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+.text-lorab{
+    font-family: 'loraB', sans-serif;
+    font-size: 1.5rem;     
+}
