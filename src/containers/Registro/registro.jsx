@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from '../../assets/img_login01.webp';
-import googleIcon from '../../assets/google_icon.png';
 import axios from "axios";
 import './registro.css';
 import '../../global.css';
@@ -92,11 +91,9 @@ function Registro() {
                                 </div>
                             </div>
                             <div className="input-group mb-3 d-flex justify-content-center">
-                                <button className="btn btn-lg btn-primary w-75 fs-6">Login</button>
+                                <button className="btn btn-lg btn-primary w-75 fs-6">Cadastrar</button>
                             </div>
-                            <div className="input-group mb-3 d-flex justify-content-center">
-                                <button className="btn btn-lg btn-light w-75 fs-6"><img src={googleIcon} className="me-2" style={{width: '30px'}}/>Entrar com Google</button>
-                            </div>
+
                             <div className="row p-5">
                                 <small>Já tem conta? <Link to={"/login"}>Faça o login.</Link></small>
                             </div>
