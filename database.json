@@ -45,7 +45,7 @@
     {
       "id": "4",
       "nome": "Câmera digital-OLYMPUS",
-      "preco": 1.800,
+      "preco": 1800,
       "estoque": 50,
       "imagem": "4.jpg"
     },
@@ -73,7 +73,7 @@
     {
       "id": "8",
       "nome": "Tripé de Câmera Nest NT777",
-      "preco": 1.180,
+      "preco": 1180,
       "estoque": 7,
       "imagem": "8.jpg"
     }
