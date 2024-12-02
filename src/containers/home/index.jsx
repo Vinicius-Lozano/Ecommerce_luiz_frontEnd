@@ -33,11 +33,7 @@ const Home = () => {
 
     return (
         <div className='container'>
-            <nav aria-label="breadcrumb">
-                <ol className="breadcrumb">
-                    <li className="breadcrumb-item active" aria-current="page"><Link to="/">Home</Link></li>
-                </ol>
-            </nav>
+
             <div className="row mt-2">
                 {loading ? (
                     <h2>Carregando produtos...</h2>
@@ -45,12 +41,13 @@ const Home = () => {
                     <h2>Nenhum produto foi encontrado.</h2>
                 ) : (
                     produtos.map((produto) => (
-                        <div key={produto.id} className='col-4'>
+                        <div key={produto.id} className='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
                             <ProdutoItem produto={produto} handleClick={() => addCarrinho(produto)} />
                         </div>
                     ))
                 )}
             </div>
+
         </div>
     );
 };
