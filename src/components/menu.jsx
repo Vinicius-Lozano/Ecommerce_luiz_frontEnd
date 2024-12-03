@@ -27,8 +27,8 @@ const MenuComponent = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-custom-blueLight">
             <div className="container-fluid">
-                <Link className="navbar-brand" to="/">
-                    Home <i className="bi bi-house"></i>
+                <Link className="navbar-brand text-shirik" to="/">
+                    Eletro Fino <i className="bi bi-house"></i>
                 </Link>
                 <div className="d-flex gap-3">
                     <div className="d-flex gap-3">
