@@ -7,6 +7,7 @@ class ProdutoService{
             return response.data;
         } catch (error) {
             console.error('Ocorreu um erro: ', error);
+            return null;
         }
     }
 
@@ -16,6 +17,7 @@ class ProdutoService{
             return response.data;
         } catch (error) {
             console.error('Ocorreu um erro: ', error);
+            return [];
         }
     }
 
