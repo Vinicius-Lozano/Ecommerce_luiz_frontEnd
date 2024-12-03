@@ -7,6 +7,7 @@ import Login from './containers/Login/login';
 import Registro from './containers/Registro/registro';
 import Carrinho from './containers/Carrinho/carrinho';
 import Produtos from './containers/Produtos/produtos';
+import ProdutoDetalhes from "./components/PodutoDetalhes";
 
 function App() {
   console.log('Componente App renderizado');
@@ -23,6 +24,7 @@ function App() {
             <Route path="/registro" element={<Registro/>}/>
             <Route path="/carrinho" element={<Carrinho />} />
             <Route path="/produtos" element={<Produtos />} />
+            <Route path="/produtos/:id" element={<ProdutoDetalhes />} />
           </Routes>
         </div>
       </Router>

@@ -3,24 +3,25 @@ import { useState, useEffect } from "react";
 import ProdutoService from "../services/produtoService";
 
 const MenuComponent = () => {
-    const [searchTerm, setSearchTerm] = useState("");
-    const [produtosFiltrados, setProdutosFiltrados] = useState([]);
+    const [searchText, setSearchText] = useState(""); 
+    const [produtosFiltrados, setProdutosFiltrados] = useState([]); 
 
     useEffect(() => {
-        if (searchTerm.trim() !== "") {
+        
+        if (searchText.trim() !== "") {
             ProdutoService.getAll().then((produtos) => {
                 const resultados = produtos.filter((produto) =>
-                    produto.nome.toLowerCase().includes(searchTerm.toLowerCase())
+                    produto.nome.toLowerCase().includes(searchText.toLowerCase()) 
                 );
-                setProdutosFiltrados(resultados);
+                setProdutosFiltrados(resultados); 
             });
         } else {
-            setProdutosFiltrados([]);
+            setProdutosFiltrados([]); 
         }
-    }, [searchTerm]);
+    }, [searchText]); 
 
     const handleInputChange = (e) => {
-        setSearchTerm(e.target.value);
+        setSearchText(e.target.value); 
     };
 
     return (
@@ -52,37 +53,33 @@ const MenuComponent = () => {
                                 type="search"
                                 placeholder="Buscar produto..."
                                 aria-label="Search"
-                                value={searchTerm}
-                                onChange={handleInputChange}
+                                value={searchText}
+                                onChange={handleInputChange} 
                             />
-                            {produtosFiltrados.length > 0 && (
-                                <ul
-                                    className="dropdown-menu show position-absolute"
-                                    style={{ zIndex: 1000, width: "100%" }}
-                                >
+                            
+                            {produtosFiltrados.length > 0 && searchText.trim() !== "" && (
+                                <ul className="dropdown-menu show position-absolute w-100 mt-5" style={{ zIndex: "1000" }}>
                                     {produtosFiltrados.map((produto) => (
                                         <li key={produto.id}>
                                             <Link
-                                                className="dropdown-item"
                                                 to={`/produtos/${produto.id}`}
+                                                className="dropdown-item d-flex align-items-center"
                                             >
-                                                <div className="d-flex align-items-center">
-                                                    <img
-                                                        src={
-                                                            produto.imagem.startsWith("http")
-                                                                ? produto.imagem
-                                                                : `/assets/imgs/${produto.imagem || "default.jpg"}`
-                                                        }
-                                                        alt={produto.nome}
-                                                        style={{
-                                                            width: "50px",
-                                                            height: "50px",
-                                                            objectFit: "cover",
-                                                            marginRight: "10px",
-                                                        }}
-                                                    />
-                                                    <span>{produto.nome}</span>
-                                                </div>
+                                                <img
+                                                    src={
+                                                        produto.imagem.startsWith("http")
+                                                            ? produto.imagem
+                                                            : `/assets/imgs/${produto.imagem || "default.jpg"}`
+                                                    }
+                                                    alt={produto.nome}
+                                                    style={{
+                                                        width: "30px",
+                                                        height: "30px",
+                                                        objectFit: "cover",
+                                                        marginRight: "10px",
+                                                    }}
+                                                />
+                                                {produto.nome}
                                             </Link>
                                         </li>
                                     ))}
